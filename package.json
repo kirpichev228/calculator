@@ -15,6 +15,13 @@
     "singleQuote": true,
     "printWidth": 100
   },
+  "lint-staged": {
+    "*.{js}": [
+      "node_modules/.bin/eslint --max-warnings=0",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kirpichev228/calculator.git"
