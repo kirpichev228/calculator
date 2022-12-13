@@ -31,6 +31,9 @@
             {
               "endOfLine": "auto"
             }
-          ]
+        ],
+        "import/prefer-default-export": "off",
+        "import/no-cycle": 0,
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     }
 }
