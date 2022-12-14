@@ -10,4 +10,4 @@ const previousNumberString = document.querySelector('[data-previous-number]');
 const historyWindow = document.querySelector('.history');
 
 export const calculator = new Calculator(previousNumberString, currentNumberString, historyWindow);
-calculator.refreshHistoryField();
+calculator.newHistoryField();

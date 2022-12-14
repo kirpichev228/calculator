@@ -68,7 +68,7 @@ themeChangers.forEach((button) => {
 
 historyClearButton.addEventListener('click', () => {
   historyWindow.innerHTML = null;
-  calculator.refreshHistoryField();
+  calculator.newHistoryField();
 });
 
 document.addEventListener('click', (e) => {

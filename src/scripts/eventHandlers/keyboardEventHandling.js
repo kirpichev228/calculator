@@ -19,7 +19,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' || e.key === '=') {
     calculator.historyFieldFinish();
     calculator.compute();
     calculator.updateDisplay();

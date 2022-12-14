@@ -27,32 +27,6 @@ export class Calculator {
     this.currentNumber = '';
   }
 
-  historyUpdate() {
-    const currentField = this.historyWindow.firstElementChild;
-    currentField.innerText += ` ${this.currentNumberString.innerText} ${this.operation}`;
-  }
-
-  historyFieldFinish() {
-    const currentField = this.historyWindow.firstElementChild;
-    currentField.innerText += ` ${this.currentNumber}`;
-  }
-
-  newHistoryField() {
-    const field = document.createElement('div');
-    field.classList.add('field');
-    this.historyWindow.prepend(field);
-  }
-
-  refreshHistoryField() {
-    const currentField = this.historyWindow.firstElementChild;
-    if (currentField !== null) {
-      currentField.innerText += `${this.previousNumber} = ${this.currentNumber}`;
-      this.newHistoryField();
-    } else {
-      this.newHistoryField();
-    }
-  }
-
   chooseSign() {
     this.currentNumber = 0 - parseFloat(this.currentNumber);
   }
@@ -102,5 +76,33 @@ export class Calculator {
     } else {
       this.previousNumberString.innerText = '';
     }
+  }
+
+  historyUpdate() {
+    const currentField = this.historyWindow.firstElementChild;
+    currentField.innerText += ` ${this.currentNumberString.innerText} ${this.operation}`;
+  }
+
+  historyFieldFinish() {
+    const currentField = this.historyWindow.firstElementChild;
+    currentField.innerText += ` ${this.currentNumber}`;
+  }
+
+  newHistoryField() {
+    const field = document.createElement('div');
+    field.classList.add('field');
+    this.historyWindow.prepend(field);
+  }
+
+  refreshHistoryField() {
+    const currentField = this.historyWindow.firstElementChild;
+    if (
+      (this.currentNumber === '' && this.previousNumber === '') ||
+      (this.currentNumber === '' && this.previousNumber !== '')
+    ) {
+      return;
+    }
+    currentField.innerText += `${this.previousNumber} = ${this.currentNumber}`;
+    this.newHistoryField();
   }
 }

@@ -235,12 +235,15 @@ button:focus {
 
 .field {
     width: 345px;
-    min-height: 50px;
     padding: 5px;
     margin: 5px;
     background-color: white;
     color: black;
     font-size: 25px;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: minmax(40px, auto);
+    align-items: center;
 }
 
 ::-webkit-scrollbar {
