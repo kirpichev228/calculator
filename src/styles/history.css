@@ -1,0 +1,68 @@
+.history-container {
+    width: 400px;
+    height: 500px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 360px;
+    bottom: -500px;
+    transition-duration: 0.4s;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+    overflow-y: scroll;
+}
+
+.history-container.active {
+    transition-duration: 0.4s;
+    bottom: 163px;
+}
+
+.clear-button {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    background: none;
+    color: white;
+    border: #ffffff 2px solid;
+    transition-duration: 0.15s;
+}
+
+.field {
+    width: 345px;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: minmax(40px, auto);
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
